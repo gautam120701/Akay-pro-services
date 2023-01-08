@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin OneTouch</title>
+</head>
+<body>
+
+    <div id="insert">
+        
+        
+    </div>
+
+    <script>
+        const data = localStorage.getItem("detail")
+        const details = JSON.parse(data)
+        let card;
+
+        for (let i =0;i<=details.length-1;i++){
+        
+        card+=`<div><label>Name :</label><label>${details[i].name}</label><br>
+            <label>Email :</label><label>${details[i].email}</label><br>
+            <label>Phone No. :</label><label>${details[i].phno}</label><br>
+            <label>Service :</label><label>${details[i].service}</label><br>
+            <label>Date :</label><label>${details[i].date}</label><br>
+            <label>Time :</label><label>${details[i].time}</label><br><br><br><div>` 
+
+        }
+        document.getElementById("insert").innerHTML=card
+
+
+    </script>
+
+
+
+</body>
+</html>
